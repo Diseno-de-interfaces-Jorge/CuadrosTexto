@@ -9,6 +9,7 @@
         Height="450"
         Width="600"
         Icon="Assets\logoCuadrosTexto.ico">
+    
     <Grid>
         <TextBox HorizontalAlignment="Left"
                  Height="61"
