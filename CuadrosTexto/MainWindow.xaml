@@ -1,0 +1,65 @@
+﻿<Window x:Class="CuadrosTexto.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CuadrosTexto"
+        mc:Ignorable="d"
+        Title="Cuadros Texto"
+        Height="450"
+        Width="600"
+        Icon="Assets\logoCuadrosTexto.ico">
+    <Grid>
+        <TextBox HorizontalAlignment="Left"
+                 Height="61"
+                 Margin="64,54,0,0"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 Width="203"
+                 PreviewKeyDown="MostrarAyudaNombre"
+                 PreviewKeyUp="OcultarAyudaNombre"/>
+
+        <TextBlock x:Name="MensajeAyudaUnoTextBlock"
+                   HorizontalAlignment="Left"
+                   Margin="336,75,0,0"
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Top"
+                   Height="25"
+                   Width="192" FontSize="20" />
+
+        <TextBox HorizontalAlignment="Left"
+            Height="61"
+            Margin="64,158,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Width="203"
+            PreviewKeyDown="MostrarAyudaApellido"
+            PreviewKeyUp="OcultarAyudaApellido"/>
+
+        <TextBlock x:Name="MensajeAyudaDosTextBlock"
+            HorizontalAlignment="Left"
+            Margin="336,179,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Height="25"
+            Width="192" FontSize="20" />
+
+        <TextBox HorizontalAlignment="Left"
+            Height="61"
+            Margin="64,262,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Width="203"
+            PreviewKeyDown="ComprobarEdad"
+            PreviewKeyUp="QuitarEdad"/>
+
+        <TextBlock x:Name="MensajeAyudaTresTextBlock"
+            HorizontalAlignment="Left"
+            Margin="336,278,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Height="26"
+            Width="192" Foreground="Red" FontSize="20" />
+
+    </Grid>
+</Window>
