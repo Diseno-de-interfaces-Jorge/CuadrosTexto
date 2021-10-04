@@ -23,37 +23,28 @@ namespace CuadrosTexto
         public MainWindow()
         {
             InitializeComponent();
+            NombreTextBox.Tag = MensajeAyudaUnoTextBlock;
+            ApellidoTextBox.Tag = MensajeAyudaDosTextBlock;
+            MensajeAyudaUnoTextBlock.Text = "Nombre del cliente";
+            MensajeAyudaDosTextBlock.Text = "Apellido del cliente";
+
         }
 
-        private void MostrarAyudaNombre(object sender, KeyEventArgs e)
+        private void MostrarAyuda(object sender, KeyEventArgs e)
         {
+            TextBox texblockInput = (TextBox)sender;
+            TextBlock mensajeAyuida = (TextBlock)texblockInput.Tag;
             if (e.Key == Key.F1)
             {
-                MensajeAyudaUnoTextBlock.Text = "Nombre del cliente";
-            }
-        }
+                if(mensajeAyuida.Visibility == Visibility.Hidden)
+                {
+                    mensajeAyuida.Visibility = Visibility.Visible;
 
-        private void OcultarAyudaNombre(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.F1)
-            {
-                MensajeAyudaUnoTextBlock.Text = "";
-            }
-        }
-
-        private void MostrarAyudaApellido(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.F1)
-            {
-                MensajeAyudaDosTextBlock.Text = "Apellido del cliente";
-            }
-        }
-
-        private void OcultarAyudaApellido(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.F1)
-            {
-                MensajeAyudaDosTextBlock.Text = "";
+                }
+                else
+                {
+                    mensajeAyuida.Visibility = Visibility.Hidden;
+                }
             }
         }
 
@@ -61,7 +52,7 @@ namespace CuadrosTexto
         private void ComprobarEdad (object sender, KeyEventArgs e)
         {
             TextBox texto = (TextBox)sender;
-            int numero;
+            int numero;// esto se puede poner en el TryParse "out_"
             if (e.Key == Key.F2)
             {
 
@@ -75,12 +66,6 @@ namespace CuadrosTexto
                 }
             }
         }
-
-        private void QuitarEdad(object sender, KeyEventArgs e)
-        {
-            MensajeAyudaTresTextBlock.Text = "";
-        }
-
 
     }
 }

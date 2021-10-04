@@ -11,14 +11,14 @@
         Icon="Assets\logoCuadrosTexto.ico">
     
     <Grid>
-        <TextBox HorizontalAlignment="Left"
+        <TextBox x:Name="NombreTextBox" 
+                HorizontalAlignment="Left"
                  Height="61"
                  Margin="64,54,0,0"
                  TextWrapping="Wrap"
                  VerticalAlignment="Top"
                  Width="203"
-                 PreviewKeyDown="MostrarAyudaNombre"
-                 PreviewKeyUp="OcultarAyudaNombre"/>
+                 PreviewKeyDown="MostrarAyuda"/>
 
         <TextBlock x:Name="MensajeAyudaUnoTextBlock"
                    HorizontalAlignment="Left"
@@ -26,16 +26,16 @@
                    TextWrapping="Wrap"
                    VerticalAlignment="Top"
                    Height="25"
-                   Width="192" FontSize="20" />
+                   Width="192" FontSize="20" Visibility="Hidden" />
 
-        <TextBox HorizontalAlignment="Left"
+        <TextBox  x:Name="ApellidoTextBox"  
+            HorizontalAlignment="Left"
             Height="61"
             Margin="64,158,0,0"
             TextWrapping="Wrap"
             VerticalAlignment="Top"
             Width="203"
-            PreviewKeyDown="MostrarAyudaApellido"
-            PreviewKeyUp="OcultarAyudaApellido"/>
+            PreviewKeyDown="MostrarAyuda" VerticalScrollBarVisibility="Disabled"/>
 
         <TextBlock x:Name="MensajeAyudaDosTextBlock"
             HorizontalAlignment="Left"
@@ -43,7 +43,7 @@
             TextWrapping="Wrap"
             VerticalAlignment="Top"
             Height="25"
-            Width="192" FontSize="20" />
+            Width="192" FontSize="20" ScrollViewer.VerticalScrollBarVisibility="Hidden" Visibility="Hidden" />
 
         <TextBox HorizontalAlignment="Left"
             Height="61"
@@ -51,8 +51,7 @@
             TextWrapping="Wrap"
             VerticalAlignment="Top"
             Width="203"
-            PreviewKeyDown="ComprobarEdad"
-            PreviewKeyUp="QuitarEdad"/>
+            PreviewKeyDown="ComprobarEdad"/>
 
         <TextBlock x:Name="MensajeAyudaTresTextBlock"
             HorizontalAlignment="Left"
